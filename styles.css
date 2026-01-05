@@ -1,0 +1,440 @@
+/* -------------------------------------------------- */
+/*  Police globale : Titres = Cormorant Garamond    */
+/*                     Texte courant = Inter        */
+/* -------------------------------------------------- */
+
+/* Réinitialisation et style de base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-padding-top: 120px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Texte principal */
+    background-color: #000000;
+    color: #ffffff;
+}
+
+:root {
+    --ease-edition: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --motion-fast: 0.4s;
+    --motion-medium: 0.6s;
+    --motion-slow: 0.8s;
+}
+
+.edition {
+    will-change: transform;
+}
+
+.edition * {
+    transition:
+        opacity var(--motion-medium) var(--ease-edition),
+        transform var(--motion-medium) var(--ease-edition);
+}
+
+.edition img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.edition a:hover {
+    opacity: 0.8;
+}
+
+.sticky-element {
+    position: sticky;
+    top: 120px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+/* -------------------------------------------------- */
+/*  Titres : Cormorant Garamond                       */
+/* -------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.title, .main-category-title, .category-title, .year-title, .solace-title, .links-container, .work-link, .credit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+/* Italic subtile pour accentuer le mystique */
+.text-bio em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #cccccc;
+}
+
+/* -------------------------------------------------- */
+/*  Texte courant : Inter                             */
+/* -------------------------------------------------- */
+p, li, a, span, .workinfo, .release-line, .event-line, .credit-line, .workscredit-line, .sub-category-title, .connect-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* -------------------------------------------------- */
+/*  Header et navigation                              */
+/* -------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.title-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #cccccc;
+}
+
+/* Header reste aligné correctement */
+header {
+    display: flex;
+    justify-content: space-between; /* logo à gauche, nav à droite */
+    align-items: center;
+    padding: 20px 40px;
+}
+
+/* -------------------------------------------------- */
+/*  Photo principale (Accueil)                        */
+/* -------------------------------------------------- */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 0px;
+    margin-top: 70px;
+}
+
+.main-photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform: translateY(0);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* -------------------------------------------------- */
+/*  Footer                                            */
+/* -------------------------------------------------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+/* -------------------------------------------------- */
+/*  Page Connect                                      */
+/* -------------------------------------------------- */
+.links-container a {
+    display: flex;
+    font-family: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0vh;
+    padding-top: 170px;
+    gap: 10px;
+}
+
+.connect-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.connect-link:hover {
+    color: #cccccc;
+}
+
+/* -------------------------------------------------- */
+/*  Vidéo en fond                                     */
+/* -------------------------------------------------- */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* -------------------------------------------------- */
+/*  Conteneur des travaux                              */
+/* -------------------------------------------------- */
+.works-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.main-category {
+    margin-bottom: 70px;
+}
+
+.main-category-title {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sub-category {
+    margin-bottom: 50px;
+}
+
+.sub-category-title {
+    color: #cccccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.work-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.work-item a {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.work-item:hover {
+    color: #aaaaaa;
+}
+
+.workinfo {
+    color: #aaaaaa;
+    font-size: 16px;
+    margin-left: 8px;
+    font-style: italic;
+}
+
+.work-link {
+    display: block;
+    padding-top: 80px;
+    color: #aaaaaa;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.work-photo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform: translateY(0);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.solace-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+}
+
+.solace-title {
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+.solace-text {
+    text-align: justify;
+}
+
+.workscredit-line {
+    padding-top: 50px;
+    text-align: justify;
+    color: #aaaaaa;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* -------------------------------------------------- */
+/*  Releases et événements                             */
+/* -------------------------------------------------- */
+.event-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: left;
+}
+
+.release-category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.year-block {
+    margin-bottom: 25px;
+}
+
+.year-title {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.event-line, .release-line, .release-title {
+    color: #aaaaaa;
+    font-size: 16px;
+    margin-bottom: 2px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* -------------------------------------------------- */
+/*  Credits                                           */
+/* -------------------------------------------------- */
+.credits-container {
+    max-width: 1200px;
+    line-height: 4px;
+    margin: 0 auto;
+    padding: 200px;
+    text-align: center;
+}
+
+.credit-title {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.credit-line a {
+    color: #aaaaaa;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1px;
+}
+
+.credit-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.credit-link:hover {
+    color: #cccccc;
+}
+
+/* -------------------------------------------------- */
+/*  Bio                                              */
+/* -------------------------------------------------- */
+.bio-wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.photo-bio {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+}
+
+.text-bio {
+    flex: 0 0 50%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    text-align: justify;
+    will-change: transform;
+}
+
+.text-bio p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #aaaaaa;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
