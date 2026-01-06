@@ -463,6 +463,7 @@ main {
     .nav-links {
         flex-direction: column;
         gap: 10px;
+        padding-left: 0px;
         align-items: center;
     }
 
@@ -485,18 +486,19 @@ main {
     /* Bio */
     .bio-wrapper {
         flex-direction: column;
-        padding: 20px 10px;
+        padding: 20px 5px;
         align-items: center;
     }
 
     .photo-bio, .text-bio {
         flex: 0 0 100%;
-        padding: 10px 0;
-        text-align: center;
+        padding: 10px 8;
+        text-align: justify;
     }
 
     .text-bio p {
         margin-bottom: 12px;
+        padding-top: 10px;
     }
 
     /* Works / Releases / Events */
@@ -508,17 +510,18 @@ main {
         text-align: center;
     }
 
-    .work-list, .release-line, .work-item, .workinfo {
-        text-align: center;
+    .release-line, .release-title {
+        text-align: left;
     }
 
     /* Credits */
     .credits-container {
-        padding: 100px 10px;
+        padding: 80px 10px;
     }
 
     .credit-title, .credit-line {
         text-align: center;
+        line-height: 30px;
     }
 
     /* Footer (si jamais tu veux le garder responsive) */
