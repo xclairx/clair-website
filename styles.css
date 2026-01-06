@@ -438,3 +438,117 @@ main {
     line-height: 1.6;
     letter-spacing: 0.5px;
 }
+
+
+
+
+/* -------------------------------------------------- */
+/* VERSION MOBILE - Tout s'empile en colonne         */
+/* -------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    /* Logo */
+    .logo-link {
+        margin-bottom: 15px;
+    }
+
+    /* Navigation */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    /* Photo principale (Accueil) */
+    .photo-container {
+        height: auto;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .main-photo {
+        max-width: 90%;
+        height: auto;
+    }
+
+    /* Bio */
+    .bio-wrapper {
+        flex-direction: column;
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    .photo-bio, .text-bio {
+        flex: 0 0 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .text-bio p {
+        margin-bottom: 12px;
+    }
+
+    /* Works / Releases / Events */
+    .works-container, .event-container, .credits-container {
+        padding: 15px 10px;
+    }
+
+    .main-category-title, .sub-category-title, .release-category h2 {
+        text-align: center;
+    }
+
+    .work-list, .release-line, .work-item, .workinfo {
+        text-align: center;
+    }
+
+    /* Credits */
+    .credits-container {
+        padding: 100px 10px;
+    }
+
+    .credit-title, .credit-line {
+        text-align: center;
+    }
+
+    /* Footer (si jamais tu veux le garder responsive) */
+    footer {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    /* Vidéo de fond */
+    #background-video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Liens Connect */
+    .links-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        height: auto;
+    }
+
+    .connect-link {
+        font-size: 18px;
+    }
+
+    /* Ajustement des releases / work-line */
+    .release-line, .release-title {
+        text-align: center;
+    }
+}
