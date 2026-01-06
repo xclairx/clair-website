@@ -508,10 +508,21 @@ main {
 
     .main-category-title, .sub-category-title, .release-category h2 {
         text-align: center;
+        margin-bottom: 20px;
     }
 
-    .release-line, .release-title {
+    .release-title {
+        display: block;
+    }
+
+    .release-line {
+        display: block;
         text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .release-line:last-child {
+        margin-bottom: 70px;
     }
 
     /* Credits */
@@ -540,14 +551,23 @@ main {
 
     /* Liens Connect */
     .links-container {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 80px;          /* espace entre les liens */
+        padding-top: 80px;
         height: auto;
     }
 
-    .connect-link {
+    .links-container .connect-link {
+        display: block;
         font-size: 18px;
+        text-decoration: none;
+        color: #ffffff;
+        margin: 0;         /* supprime margin par défaut */
+        padding: 0;        /* supprime padding par défaut */
+        line-height: 5;  /* réduit l'espace vertical entre les liens */
     }
 
     /* Ajustement des releases / work-line */
